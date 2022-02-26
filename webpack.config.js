@@ -10,12 +10,18 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                 }
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', 'json'],
+        mainFiles: ['index'],
+        alias: {
+            components: path.resolve(__dirname, 'src/components'),
+        },
     },
     devServer: {
         static: './dist',
