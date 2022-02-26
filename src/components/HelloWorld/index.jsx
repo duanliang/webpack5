@@ -3,7 +3,7 @@ import styles from './index.less';
 
 export default () => {
     return (
-        <div className="container">
+        <div className={styles.container}>
             <h1>hello webpack</h1>
         </div>
     )
