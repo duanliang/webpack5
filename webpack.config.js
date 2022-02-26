@@ -10,10 +10,12 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                use: {
-                    loader: 'babel-loader',
-                }
-            }
+                use: ['babel-loader']
+            },
+            {
+                test: /\.less?$/,
+                use: ["style-loader", "css-loader", "less-loader"]
+            },
         ]
     },
     resolve: {
