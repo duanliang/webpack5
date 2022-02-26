@@ -27,6 +27,18 @@ module.exports = {
                     "less-loader"
                 ]
             },
+            {
+                test: /\.(jpg|png|gif)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            esModule: false
+                        }
+                    },
+                ],
+                type: "javascript/auto",
+            },
         ]
     },
     resolve: {
@@ -34,6 +46,7 @@ module.exports = {
         mainFiles: ['index'],
         alias: {
             components: path.resolve(__dirname, 'src/components'),
+            assets: path.resolve(__dirname, 'src/assets'),
         },
     },
     devServer: {
