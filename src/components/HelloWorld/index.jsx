@@ -1,5 +1,5 @@
 import React from 'react';
-import gif from '../../assets/main46.jpg'
+import gif from '../../assets/1.gif'
 import styles from './index.less';
 
 export default () => {

@@ -29,16 +29,9 @@ module.exports = {
             },
             {
                 test: /\.(jpg|png|gif)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            esModule: false
-                        }
-                    },
-                ],
-                type: "javascript/auto",
-            },
+                type: "asset/inline",
+            }
+
         ]
     },
     resolve: {
