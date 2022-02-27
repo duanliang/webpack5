@@ -1,8 +1,9 @@
 var path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/index.tsx',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -49,7 +50,14 @@ module.exports = {
             }
         ]
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new ESLintPlugin({
+            fix: true,
+            extensions: ['js', 'ts', 'jsx', 'tsx', 'json'],
+            exclude: '/node_modules/'
+        })
+    ],
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         mainFiles: ['index'],

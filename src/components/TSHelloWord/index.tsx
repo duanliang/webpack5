@@ -1,10 +1,10 @@
 import React from "react";
 
 interface TSHelloWordProps {
-    name?: string;
+    name: string;
 }
 
-const TSHelloWord: React.FC<TSHelloWordProps> = (props: any) => {
+const TSHelloWord: React.FC<TSHelloWordProps> = (props) => {
     return (
         <div style={{ textAlign: 'center' }}>
             <h1>hello world  tscript by {props.name}</h1>
@@ -13,3 +13,4 @@ const TSHelloWord: React.FC<TSHelloWordProps> = (props: any) => {
 }
 
 export default TSHelloWord;
+
