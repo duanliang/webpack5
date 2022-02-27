@@ -5,9 +5,14 @@ import HelloWorld from './components/HelloWorld';
 import GridLayout from './components/GridLayout';
 import TSHelloWord from './components/TSHelloWord';
 
+import { DatePicker } from 'antd';
+
+import 'antd/dist/antd.css'
+
 const App = () => {
     return (
         <div>
+            <DatePicker />
             <HelloWorld />
             <GridLayout />
             <TSHelloWord name={'DL'} />

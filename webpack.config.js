@@ -47,6 +47,19 @@ module.exports = {
             {
                 test: /\.(jpg|png|gif)$/,
                 type: "asset/inline",
+            },
+            {
+                test: /\.css?$/,
+                exclude: '/src/',
+                use: [
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    }
+                ]
             }
         ]
     },
