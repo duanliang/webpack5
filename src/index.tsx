@@ -7,11 +7,6 @@ import TSHelloWord from './components/TSHelloWord';
 
 import { DatePicker } from 'antd';
 
-import 'antd/dist/antd.less'
-
-// import "./index.less";
-
-
 const App = () => {
     return (
         <div>

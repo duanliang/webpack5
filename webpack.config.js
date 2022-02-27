@@ -43,7 +43,8 @@ module.exports = {
                         }
                     },
                     {
-                        loader: "less-loader"
+                        loader: "less-loader",
+
                     }
                 ]
             },
@@ -51,8 +52,7 @@ module.exports = {
                 test: /\.less$/,
                 exclude: /src/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    // { loader: "style-loader" },
+                    { loader: "style-loader" },
                     {
                         loader: "css-loader",
                         options: {
@@ -63,11 +63,11 @@ module.exports = {
                         loader: "less-loader",
                         options: {
                             lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
-                                // modifyVars: {
-                                //     'primary-color': '#1DA57A',
-                                //     'link-color': '#1DA57A',
-                                //     'border-radius-base': '2px',
-                                // },
+                                modifyVars: {
+                                    'primary-color': '#1DA57A',
+                                    'link-color': '#1DA57A',
+                                    'border-radius-base': '2px',
+                                },
                                 javascriptEnabled: true,
                             },
                         }
@@ -78,6 +78,19 @@ module.exports = {
                 test: /\.(jpg|png|gif)$/,
                 type: "asset/inline",
             },
+            // {
+            //     test: /\.css?$/,
+            //     exclude: '/src/',
+            //     use: [
+            //         { loader: 'style-loader' },
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 importLoaders: 1
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
     plugins: [
