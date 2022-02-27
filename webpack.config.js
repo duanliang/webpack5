@@ -24,6 +24,20 @@ module.exports = {
                             }
                         },
                     },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'postcss-preset-env', {
+
+                                        },
+                                    ]
+                                ]
+                            }
+                        }
+                    },
                     "less-loader"
                 ]
             },
@@ -31,7 +45,6 @@ module.exports = {
                 test: /\.(jpg|png|gif)$/,
                 type: "asset/inline",
             }
-
         ]
     },
     resolve: {
