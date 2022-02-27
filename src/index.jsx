@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 
 import HelloWorld from 'components/HelloWorld';
 import GridLayout from './components/GridLayout';
+import TSHelloWord from './components/TSHelloWord';
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
         <div>
             <HelloWorld />
             <GridLayout />
+            <TSHelloWord name='DL' />
         </div>
     )
 }

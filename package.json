@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/duanliang/webpack5#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
     "less": "^4.1.2",
@@ -36,6 +38,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@types/react": "^17.0.39",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

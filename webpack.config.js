@@ -10,7 +10,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(js|jsx|ts|tsx)$/,
                 use: ['babel-loader']
             },
             {
@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [new MiniCssExtractPlugin()],
     resolve: {
-        extensions: ['.js', '.jsx', 'json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         mainFiles: ['index'],
         alias: {
             components: path.resolve(__dirname, 'src/components'),

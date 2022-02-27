@@ -8,6 +8,9 @@
         ],
         [
             "@babel/preset-react"
+        ],
+        [
+            "@babel/typescript"
         ]
     ]
 }
