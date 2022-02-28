@@ -7,7 +7,12 @@
         "strict": true,
         "isolatedModules": false,
         "esModuleInterop": true,
-        "jsx": "react",    
+        "jsx": "react",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
     },
     "include": [
         "src",

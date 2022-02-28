@@ -97,8 +97,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         mainFiles: ['index'],
         alias: {
-            components: path.resolve(__dirname, 'src/components'),
-            assets: path.resolve(__dirname, 'src/assets'),
+            '@': path.resolve(__dirname, 'src')
         },
     },
     optimization: {                                                                         //代码分离

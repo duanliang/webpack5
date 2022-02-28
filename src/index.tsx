@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 
 import HelloWorld from './components/HelloWorld';
 import GridLayout from './components/GridLayout';
-import TSHelloWord from './components/TSHelloWord';
+import TSHelloWord from '@/components/TSHelloWord';
 
 import { DatePicker } from 'antd';
 
