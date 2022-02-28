@@ -3,18 +3,18 @@
         [
             "@babel/preset-env",
             {
-                "useBuiltIns": "entry"
+                "useBuiltIns": "entry"                          // 编译es6及其新语法特性
             }
         ],
         [
-            "@babel/preset-react"
+            "@babel/preset-react"                               // 编译react
         ],
         [
-            "@babel/typescript"
+            "@babel/typescript"                                 // 编译typescript
         ]
     ],
     "plugins": [
-        [
+        [                                                       // antd 按需加载css
             "import",
             {
                 "libraryName": "antd",
