@@ -18,13 +18,13 @@ module.exports = {
                 test: /\.less?$/,
                 exclude: /node_modules/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,                                            //将css打包到main.css文件中，否则将在页面的style标签里显示
                     // "style-loader",
                     {
                         loader: "css-loader",
                         options: {
                             modules: {
-                                localIdentName: "[local]-[hash:base64:10]",
+                                localIdentName: "[local]-[hash:base64:10]",                 //开启css module（css模块）并且生成本地标识
                             }
                         },
                     },
@@ -62,12 +62,12 @@ module.exports = {
                     {
                         loader: "less-loader",
                         options: {
-                            lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
-                                modifyVars: {
-                                    'primary-color': '#1DA57A',
-                                    'link-color': '#1DA57A',
-                                    'border-radius-base': '2px',
-                                },
+                            lessOptions: {
+                                // modifyVars: {                                            //配置antd自定义主题
+                                //     'primary-color': '#1DA57A',
+                                //     'link-color': '#1DA57A',
+                                //     'border-radius-base': '2px',
+                                // },
                                 javascriptEnabled: true,
                             },
                         }
@@ -75,27 +75,14 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jpg|png|gif)$/,
+                test: /\.(jpg|png|gif)$/,                                                   //webpack5.0后不再需要使用file-loader和url-loader进行预处理
                 type: "asset/inline",
             },
-            // {
-            //     test: /\.css?$/,
-            //     exclude: '/src/',
-            //     use: [
-            //         { loader: 'style-loader' },
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 importLoaders: 1
-            //             }
-            //         }
-            //     ]
-            // }
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin(),
-        new ESLintPlugin({
+        new MiniCssExtractPlugin(),                                                         //将css打包到main.css文件中，否则将在页面的style标签里显示
+        new ESLintPlugin({                                                                  //eslint 检查文件机制
             fix: true,
             extensions: ['js', 'ts', 'jsx', 'tsx', 'json'],
             exclude: '/node_modules/'
