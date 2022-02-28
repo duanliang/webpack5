@@ -6,7 +6,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.tsx',
     output: {
-        filename: 'bundle.js',
+        filename: 'bundle.[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -99,6 +99,11 @@ module.exports = {
         alias: {
             components: path.resolve(__dirname, 'src/components'),
             assets: path.resolve(__dirname, 'src/assets'),
+        },
+    },
+    optimization: {                                                                         //代码分离
+        splitChunks: {
+            chunks: 'all',
         },
     },
     devServer: {
