@@ -1,6 +1,7 @@
 var path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -81,6 +82,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new HTMLWebpackPlugin({
+            title: 'webpack5',                                                               //生成html
+            template: 'index.html'
+        }),
         new MiniCssExtractPlugin(),                                                         //将css打包到main.css文件中，否则将在页面的style标签里显示
         new ESLintPlugin({                                                                  //eslint 检查文件机制
             fix: true,
