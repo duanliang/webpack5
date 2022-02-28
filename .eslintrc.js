@@ -24,5 +24,10 @@ module.exports = {
     "rules": {
         "react/display-name": "off",
         "@typescript-eslint/no-var-requires": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "17.0.2"
+        }
     }
 }
